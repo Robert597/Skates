@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+}
+.row{
+  display: flex;
+  height: 100%;
+  padding: 0 32px;
+}
+.v-center{
+  align-items: center;
+}
+.space-between{
+  justify-content: space-between;
+}
+@media all and (max-width: 1560px){
+  .container{
+  width: 1280px;
+  min-width: 1280px;
+  }
+}
+@media all and (max-width: 1366px){
+  .container{
+  width: 1080px;
+  min-width: 1080px;
+  }
+}
+@media all and (max-width: 1080px){
+  .container{
+  width: 100%;
+  min-width: 100%;
+  }
+}
+@media all and (max-width: 425px){
+ .row{
+  padding: 0 16px;
+ }
 }
