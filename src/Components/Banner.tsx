@@ -1,27 +1,61 @@
-import React from 'react'
+import React from 'react';
+import {FaArrowRight} from'react-icons/fa';
+import "../Styles/banner.css";
+import {motion} from "framer-motion";
+
 
 const Banner = () => {
+    const lineParentVariant = {
+        animate: {
+            transition: {
+                staggerChildren: .5
+            }
+        }
+    }
+    const lineVariant = {
+        initial: {
+            y: 80,
+            skewY: 5,
+            transition: {
+                duration: 2
+            }
+        },
+        animate: {
+            y: 0,
+            skewY: 0,
+            transition: {
+                duration: 2,
+                ease: "easeInOut"
+            }
+        }
+       
+    }
   return (
-    <section className='main'>
+    <motion.section className='main'
+   >
         <div className="container">
             <div className="row">
-                <h2>
-                    <div className="line">
-                        <span>Creating Unique Brand is</span>
-                    </div>
-                    <div className="line">
-                        <span>what we do at skates.</span>
-                    </div>
-                </h2>
+                <motion.h2 variants={lineParentVariant}
+                initial='initial'
+                animate='animate'>
+                    <motion.div className="line">
+                        <motion.span variants={lineVariant}>Creating Unique Brand is</motion.span>
+                    </motion.div>
+                    <motion.div className="line">
+                        <motion.span
+                        variants={lineVariant}>what we do at skates.</motion.span>
+                    </motion.div>
+                </motion.h2>
                 <div className="btn-row">
                     <a href="/">
-                        More About Us 
+                        More About Us <FaArrowRight className='svg'/>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
+
 
 export default Banner

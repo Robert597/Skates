@@ -1,29 +1,51 @@
 .header{
     position: fixed;
-    width: 100%;
-    height: 128px;
+    width: 100vw;
+    height: 80px;
     z-index: 4;
+    box-sizing: border-box;
+    mix-blend-mode: difference;
+    color: #fff;
+    transition: all .5s;
+}
+.container .row{
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+.logo{
+    color: #fff;
 }
 .header .logo a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: .5rem;
-    color: #000;
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: 600;
-    font-family: 'Cinzel', serif;
+    font-family: mont, serif;
     cursor: pointer;
+    color: #fff;
 }
+
 .nav{
     width: 25px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 .nav span{
     margin-bottom: .3rem;
-    background-color: #000;
     height: 2px;
     width: 100%;
     display: block;
 }
 .nav span:last-child{
     margin-left: 4px;
+}
+@media all and (max-width: 425px){
+    .nav{
+        width: 20px;
+    }
+    .container.row{
+        padding: 0 16px;
+      }
 }

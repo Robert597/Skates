@@ -1,0 +1,72 @@
+
+.intro-overlay .top{
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+}
+.top .overlay-top{
+position: absolute;
+height: 100%;
+width: 33.333vw;
+background-color: #000;
+bottom: 0;
+left: 0;
+right: 0;
+}
+.top .overlay-top:nth-child(2){
+    left: 33.333%;
+}
+.top .overlay-top:nth-child(3){
+    left: 66.666%;
+}
+.intro-overlay .bottom{
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 8;
+}
+.bottom .overlay-bottom{
+    position: absolute;
+    height: 100%;
+    width: 33.333vw;
+    background-color: #000;
+    bottom: 0;
+    right: 66.666%;
+}
+.bottom .overlay-bottom:nth-child(2){
+right: 33.333%;
+background-color: #000;
+}
+.bottom .overlay-bottom:nth-child(3){
+right: 0;
+background-color: #000;
+}
+@media all and (max-width: 768px){
+    .top .overlay-top{
+        width: 100vw;
+    }
+    .top .overlay-top:nth-child(2){
+        display: none;
+    }
+    .top .overlay-top:nth-child(3){
+        display: none;
+    }
+    .bottom .overlay-bottom{
+        right: 0;
+        width: 100vw;
+    }
+    .bottom .overlay-bottom:nth-child(2){
+       width: 100vw;
+       top: 100%;
+       right: 0;
+        }
+        .bottom .overlay-bottom:nth-child(3){
+            width: 100vw;
+            top: 200%;
+            right: 0;
+        }
+}
