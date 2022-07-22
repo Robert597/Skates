@@ -4,7 +4,8 @@ import {Routes, Route, Link, useLocation} from "react-router-dom"
 import Home from './Components/Home';
 import CasesPage from './Pages/CasesPage';
 import Header from './Components/Header';
-import {AnimatePresence,  AnimaeSharedLayout, motion, AnimateSharedLayout} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
+import Navbar from './Components/Navbar';
 
 
 
@@ -30,7 +31,6 @@ const App = () => {
   
 
   return (
-    <AnimateSharedLayout>
     <motion.div className="App" >
       <Header/>
       <AnimatePresence  exitBeforeEnter>
@@ -40,7 +40,7 @@ const App = () => {
       </Routes>
       </AnimatePresence>
     </motion.div>
-    </AnimateSharedLayout>
+    
     
   );
 }

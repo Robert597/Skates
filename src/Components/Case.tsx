@@ -9,6 +9,7 @@ import "../Styles/cases.css";
 const variant = {
   
     stop: {
+        
         transition: {
             ease: "easeInOut",
             duration: 1,
@@ -16,11 +17,6 @@ const variant = {
            }
     },
     exit: {
-        opacity: 0,
-        transition: {
-            ease: "easeInOut",
-            duration: 1,
-           }
     },
     
 }
@@ -74,7 +70,7 @@ const Casee = ({id, subtitle, title, img}: Case) => {
                 
                 </div>
                 <motion.div className="case-image"
-               layoutId='image'
+               
                 >
                 <motion.img src={require(`../Assets/${img}.jpg`)} alt="case" 
                 initial={{

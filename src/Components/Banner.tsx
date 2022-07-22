@@ -8,7 +8,7 @@ const Banner = () => {
     const lineParentVariant = {
         animate: {
             transition: {
-                staggerChildren: .5
+                staggerChildren: .5,
             }
         }
     }

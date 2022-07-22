@@ -4,11 +4,10 @@ import Cases from "./Cases";
 import Banner from "./Banner"
 import Header from './Header';
 import IntroOverlay from './IntroOverlay';
-import * as caseData from "../Util/cases.json";
 import {motion} from 'framer-motion'
 
 const Home = () => {
- 
+ let caseData = require("../Util/cases.json");
   return (
     <motion.div
     className='homediv'
